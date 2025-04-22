@@ -9,17 +9,17 @@ interface CardViagensProps {
 function CardViagens({ viagem }: CardViagensProps) {
     return (
     <div className='border flex flex-col rounded-2xl overflow-hidden justify-between shadow-lg'>
-        <header className='py-2 px-6 bg-[#A5D6A7] text-[#1B5E20] font-bold text-2xl'>
+        <header className='py-2 px-6 bg-pink-300 text-[#6F2473] font-bold text-2xl'>
         Viagem
         </header>
 
-    <div className='p-6 bg-[#F0F5F3] text-[#3C3C3C]'>
+    <div className='p-6 bg-white text-[#3C3C3C]'>
         <p className='text-xl font-semibold mb-2'>{viagem.origem}</p>
         <p className='text-base'>{viagem.destino}</p>
     </div>
 
     <div className="flex">
-        <Link to={`/editarviagem/${viagem.id}`}
+        <Link to={`/editarviagens/${viagem.id}`}
         className='w-full text-white bg-green-300 hover:bg-green-400
         flex items-center justify-center py-2'>`
         <button className="w-full bg-transparent border-none text-white">
