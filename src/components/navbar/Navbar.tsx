@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import Veiculo from '../../models/Veiculo';
 function Navbar() {
     return (
     <>
@@ -10,8 +11,8 @@ function Navbar() {
                 <div className='flex gap-4'>
                     <Link to='/viagens' className='hover:underline'>Viagens</Link>
                     <Link to='/cadastrarviagem' className='hover:underline'>Cadastrar Viagem</Link>
-                    <Link to='/listarmotorista' className='hover:underline'>Motoristas</Link>
-                    <Link to='/cadastrarmotorista' className='hover:underline'>Cadastrar Motorista</Link>
+                    <Link to='/listarveiculos' className='hover:underline'>Veiculos</Link>
+                    <Link to='/cadastrarveiculo' className='hover:underline'>Cadastrar Veiculo</Link>
                 </div>
                 </div>
             </div>
