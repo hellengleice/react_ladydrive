@@ -9,6 +9,7 @@ import DeletarViagens from './components/viagens/deletarviagens/DeletarViagens';
 import FormVeiculo from './components/veiculo/formveiculo/FormVeiculo'
 import DeletarVeiculos from './components/veiculo/deletarveiculos/DeletarVeiculos'
 import ListarVeiculos from './components/veiculo/listarveiculos/ListarVeiculos'
+import Cadastro from './pages/cadastro/Cadastro'
 
 
 function App() {
@@ -25,10 +26,11 @@ return (
             <Route path="/editarviagens/:id" element={<FormViagem />} />
             <Route path="/deletarviagens/:id" element={<DeletarViagens/>} />
 
-            <Route path="/veiculos" element={<ListarVeiculos />} />
+            <Route path="/listarveiculos" element={<ListarVeiculos />} />
             <Route path="/cadastrarveiculo" element={<FormVeiculo />} />
             <Route path="/editarveiculos/:id" element={<FormVeiculo />} />
             <Route path="/deletarveiculos/:id" element={<DeletarVeiculos/>} />
+            <Route path="/cadastrar" element={<Cadastro/>} />
             </Routes>
         </div>
         <Footer />

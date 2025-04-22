@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import Veiculo from '../../models/Veiculo';
 function Navbar() {
     return (
     <>
@@ -13,6 +12,7 @@ function Navbar() {
                     <Link to='/cadastrarviagem' className='hover:underline'>Cadastrar Viagem</Link>
                     <Link to='/listarveiculos' className='hover:underline'>Veiculos</Link>
                     <Link to='/cadastrarveiculo' className='hover:underline'>Cadastrar Veiculo</Link>
+                    <Link to='/cadastrar' className='hover:underline'>Cadastrar Usuario</Link>
                 </div>
                 </div>
             </div>
