@@ -3,7 +3,7 @@ import './Cadastro.css'
 import { ChangeEvent, FormEvent, useEffect, useState } from 'react'
 import Usuario from '../../models/Usuario'
 import { ToastAlerta } from '../../ utils/ToastAlerta'
-import { cadastrar } from '../../service/Service'
+import { cadastrar, cadastrarUsuario } from '../../service/Service'
 import { RotatingLines } from 'react-loader-spinner'
 
 
@@ -22,15 +22,6 @@ function Cadastro() {
     veiculo: null,
   })
 
-  useEffect(() => {
-    if (usuario.id !== 0 && usuario.id != null) {
-      retornar()
-    }
-  }, [usuario])
-
-  function retornar() {
-    navigate('/')
-  }
 
   function atualizarEstado(e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
     setUsuario({
@@ -49,7 +40,7 @@ function Cadastro() {
     if (confirmaSenha === usuario.senha && usuario.senha.length >= 8) {
       setIsLoading(true)
       try {
-        await cadastrar('/cadastrar', usuario, setUsuario, {})
+        await cadastrarUsuario('/cadastrar', usuario, setUsuario, {})
         ToastAlerta('Usuário cadastrado com sucesso!', "sucesso")
       } catch (error) {
         ToastAlerta('Erro ao cadastrar o usuário!', "erro")

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Home() {
     return (
     <>
@@ -14,10 +16,10 @@ function Home() {
 
             <div className="flex gap-4">
                 <button className="rounded-full text-[#6F2473] font-semibold border-2 border-[#6F2473] py-2 px-6 hover:bg-[#F4D8E4] transition-all">
-                Motorista
+                <Link to='/cadastrarveiculo' className='hover:underline'>Motorista Cadastrar Veiculo</Link>
                 </button>
                 <button className="rounded-full text-white font-semibold bg-[#6F2473] hover:bg-[#4B2142] py-2 px-6 transition-all">
-                Passageira
+                <Link to='/cadastrarviagem' className='hover:underline'>Cadastrar Viagem</Link>
                 </button>
             </div>
             </div>
