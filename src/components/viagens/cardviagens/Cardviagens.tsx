@@ -26,7 +26,7 @@ function CardViagens({ viagem }: CardViagensProps) {
             Editar
         </button>
         </Link>
-        <Link to={`/deletarviagem/${viagem.id}`} 
+        <Link to={`/deletarviagens/${viagem.id}`} 
         className='text-slate-100 bg-red-400 hover:bg-red-600 w-full 
         flex items-center justify-center'>
         <button>Deletar</button>

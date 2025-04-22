@@ -3,7 +3,9 @@ import Footer from './components/footer/Footer'
 import Navbar from './components/navbar/Navbar'
 import Home from './pages/home/Home'
 import './App.css'
-import Cadastro from './pages/cadastro/Cadastro'
+import ListarViagens from './components/viagens/listarviagens/ListarViagens'
+import FormViagem from './components/viagens/formviagem/FormViagem'
+import DeletarViagens from './components/viagens/deletarviagens/DeletarViagens';
 
 function App() {
 return (
@@ -14,7 +16,10 @@ return (
             <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/" element={<Cadastro />} />
+            <Route path="/viagens" element={<ListarViagens />} />
+            <Route path="/cadastrarviagem" element={<FormViagem />} />
+            <Route path="/editarviagens/:id" element={<FormViagem />} />
+            <Route path="/deletarviagens/:id" element={<DeletarViagens/>} />
             </Routes>
         </div>
         <Footer />
