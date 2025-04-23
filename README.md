@@ -1,54 +1,68 @@
-# React + TypeScript + Vite
+# LadyDrive - Caronas Seguras para Mulheres 🚗💜
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**LadyDrive** é uma plataforma de caronas compartilhadas feita **por e para mulheres**, com o objetivo de proporcionar um ambiente mais seguro, acolhedor e confiável na mobilidade urbana.  
+Projeto desenvolvido como parte do curso de **Desenvolvimento FullStack Java da Generation Brasil**.
 
-Currently, two official plugins are available:
+## 👩‍💻 Regras de Negócio
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Apenas **usuárias do gênero feminino** podem se cadastrar e utilizar a plataforma para oferecer ou solicitar caronas.
+- O objetivo é garantir **mais segurança e conforto** para mulheres no transporte.
+- Cada usuária (motorista) pode criar um perfil, cadastrar rotas e seus veículos.
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [ESLint](https://eslint.org/)
+- Tailwind CSS
+- Integração com backend Java Spring Boot
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📁 Estrutura do Projeto
+
+```plaintext
+react_ladydrive/
+├── public/              # Arquivos estáticos
+├── src/
+│   ├── components/      # Componentes reutilizáveis
+│   ├── pages/           # Páginas principais (Home e Cadastro)
+│   ├── services/        # Consumo de API
+│   └── App.tsx          # Componente principal
+├── vite.config.ts       # Configuração do Vite
+├── tsconfig.json        # Configuração do TypeScript
+├── package.json         # Dependências e scripts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Como Rodar o Projeto Localmente
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Clone o repositório:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+git clone https://github.com/Isabela-prog/react_ladydrive.git
+cd react_ladydrive
 ```
+2.Instale as dependências:
+```
+yarn install
+```
+3.Inicie o servidor de desenvolvimento:
+```
+yarn dev
+```
+4.Acesse o projeto no navegador:
+```
+http://localhost:8080
+```
+## 📌 Funcionalidades Previstas
+
+- [x] Cadastro e login de usuárias
+- [x] Feed com rotas (com deleção e alteração)
+- [x] Feed veículos (com deleção e alteração)
+
+## ✨ Contribuições
+- [@Isabela-prog](https://github.com/Isabela-prog)
+- [@EvelynSantos6](https://github.com/EvelynSantos6)
+- [@maytearaujo](https://github.com/maytearaujo)
+- [@ThainaraCruz](https://github.com/ThainaraCruz)
+- [@Abilafora](https://github.com/Abilafora)
+- [@hellengleice](https://github.com/hellengleice)
+
