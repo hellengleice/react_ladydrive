@@ -1,3 +1,4 @@
+import Usuario from "./Usuario";
 import Viagem from "./Viagem";
 
 export default interface Veiculo{
@@ -7,4 +8,5 @@ export default interface Veiculo{
     cor: string;
     motorista: string;
     viagem: Viagem | null;
+    usuario: Usuario | null;
 }

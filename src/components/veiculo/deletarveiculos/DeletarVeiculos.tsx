@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { RotatingLines } from "react-loader-spinner";
 import Veiculo from '../../../models/Veiculo';
 import { buscar, deletar } from "../../../service/Service";
+import { ToastAlerta } from "../../../ utils/ToastAlerta";
 
 function DeletarVeiculos() {
   const [veiculos, setVeiculos] = useState<Veiculo>({} as Veiculo);
@@ -24,11 +25,10 @@ function DeletarVeiculos() {
     setIsLoading(true);
     try {
       await deletar(`/veiculos/${id}`);
-      alert("Veículo deletado com sucesso!");
+      ToastAlerta("Veículo deletado com sucesso!", "sucesso");
       retornar();
     } catch (error) {
-      alert("Erro ao deletar seu veículo.");
-      console.error(error);
+      ToastAlerta("Erro ao deletar seu veículo.", "erro");
     } finally {
       setIsLoading(false);
     }

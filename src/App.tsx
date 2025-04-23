@@ -10,11 +10,13 @@ import FormVeiculo from './components/veiculo/formveiculo/FormVeiculo'
 import DeletarVeiculos from './components/veiculo/deletarveiculos/DeletarVeiculos'
 import ListarVeiculos from './components/veiculo/listarveiculos/ListarVeiculos'
 import Cadastro from './pages/cadastro/Cadastro'
+import { ToastContainer } from 'react-toastify'
 
 
 function App() {
 return (
     <>
+        <ToastContainer />
         <BrowserRouter>
         <Navbar />
         <div className="min-h-[80vh]">
@@ -26,11 +28,13 @@ return (
             <Route path="/editarviagens/:id" element={<FormViagem />} />
             <Route path="/deletarviagens/:id" element={<DeletarViagens/>} />
 
-            <Route path="/listarveiculos" element={<ListarVeiculos />} />
+            <Route path="/veiculos" element={<ListarVeiculos />} />
             <Route path="/cadastrarveiculo" element={<FormVeiculo />} />
             <Route path="/editarveiculos/:id" element={<FormVeiculo />} />
             <Route path="/deletarveiculos/:id" element={<DeletarVeiculos/>} />
-            <Route path="/cadastrar" element={<Cadastro/>} />
+            
+            <Route path="/cadastro" element={<Cadastro />} />
+            {/* <Route path="/cadastrar" element={<Cadastro/>} /> */}
             </Routes>
         </div>
         <Footer />

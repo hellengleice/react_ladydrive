@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { RotatingLines } from "react-loader-spinner";
 import Viagem from '../../../models/Viagem';
 import { buscar, deletar } from "../../../service/Service";
+import { ToastAlerta } from "../../../ utils/ToastAlerta";
 
 function DeletarViagens() {
   const [viagens, setViagens] = useState<Viagem>({} as Viagem);
@@ -24,11 +25,10 @@ function DeletarViagens() {
     setIsLoading(true);
     try {
       await deletar(`/viagens/${id}`);
-      alert("Viagem deletada com sucesso!");
+      ToastAlerta("Viagem deletada com sucesso!", "sucesso");
       retornar();
     } catch (error) {
-      alert("Erro ao deletar sua viagem.");
-      console.error(error);
+      ToastAlerta("Erro ao deletar sua viagem.", "erro");
     } finally {
       setIsLoading(false);
     }

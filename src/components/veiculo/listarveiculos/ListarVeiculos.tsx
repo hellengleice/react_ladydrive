@@ -11,7 +11,7 @@ async function buscarVeiculos() {
     try {
     await buscar("/veiculos", setVeiculos, {});
     } catch (error: any) {
-    alert("Não foi possível encontrar seus veículos");
+        ToastAlerta("Não foi possível encontrar seus veículos", "info");
     }
 }
 

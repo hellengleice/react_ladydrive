@@ -13,7 +13,7 @@ function Footer() {
                         </p>
                     <p className='text-lg font-serif'>Para mais projetos acesse! </p>
                     <div className='flex gap-2'>
-	            <a href="https://github.com/Abilafora/projeto_integrador_rh_queens_-front.git" target="_blank">
+	            <a href="https://github.com/Abilafora/react_ladydrive" target="_blank">
                     <GithubLogo size={32} weight='bold' />
                     </a>
                     </div> 

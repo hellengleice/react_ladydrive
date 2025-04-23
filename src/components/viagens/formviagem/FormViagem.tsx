@@ -3,6 +3,7 @@ import { RotatingLines } from "react-loader-spinner";
 import { useNavigate, useParams } from "react-router-dom";
 import { atualizar, buscar, cadastrar } from "../../../service/Service";
 import Viagem from "../../../models/Viagem";
+import { ToastAlerta } from "../../../ utils/ToastAlerta";
 
 function FormViagem() {
   const navigate = useNavigate();
@@ -14,11 +15,9 @@ function FormViagem() {
 
   async function buscarPorId(id: string) {
     try {
-      await buscar(`/viagens/${id}`, setViagem, {
-        headers: { Authorization: "" },
-      });
+      await buscar(`/viagens/${id}`, setViagem);
     } catch (error: any) {
-      alert("Erro ao buscar a sua viagem.");
+      ToastAlerta("Erro ao buscar a sua viagem.", "info");
     }
   }
 
@@ -45,14 +44,14 @@ function FormViagem() {
 
     try {
       if (id !== undefined) {
-        await atualizar(`/viagens`, viagem, setViagem, {});
-        alert("A viagem foi atualizada com sucesso!");
+        await atualizar(`/viagens`, viagem, setViagem);
+        ToastAlerta("A viagem foi atualizada com sucesso!", "sucesso");
       } else {
-        await cadastrar(`/viagens`, viagem, setViagem, {});
-        alert("A viagem foi cadastrada com sucesso!");
+        await cadastrar(`/viagens`, viagem, setViagem);
+        ToastAlerta("A viagem foi cadastrada com sucesso!", "sucesso");
       }
     } catch (error: any) {
-      alert("Erro ao salvar a viagem.");
+      ToastAlerta("Erro ao salvar a viagem.", "erro");
     } finally {
       setIsLoading(false);
       retornar();

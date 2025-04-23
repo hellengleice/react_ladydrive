@@ -3,15 +3,16 @@ import { DNA } from "react-loader-spinner";
 import Viagem from "../../../models/Viagem";
 import CardViagens from "../cardviagens/CardViagens";
 import { buscar } from "../../../service/Service";
+import { ToastAlerta } from "../../../ utils/ToastAlerta";
 
 function ListarViagens() {
   const [viagens, setViagens] = useState<Viagem[]>([]);
 
   async function buscarViagens() {
     try {
-      await buscar("/viagens", setViagens, {});
+      await buscar("/viagens", setViagens);
     } catch (error: any) {
-      alert("Não foi possível encontrar sua viagem");
+      ToastAlerta("Não foi possível encontrar sua viagem", "erro");
     }
   }
 
