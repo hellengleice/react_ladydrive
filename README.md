@@ -66,3 +66,7 @@ http://localhost:8080
 - [@Abilafora](https://github.com/Abilafora)
 - [@hellengleice](https://github.com/hellengleice)
 
+---
+
+![Carona Girl](https://i.postimg.cc/wTw1zhYY/appcaronagirl.jpg)
+
